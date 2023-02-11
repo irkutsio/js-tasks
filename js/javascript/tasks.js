@@ -324,25 +324,25 @@
 // getSubscriptionPrice('starter');
 
 // автоперевірка 28
-function checkPassword(password) {
-  const ADMIN_PASSWORD = 'jqueryismyjam';
-  let message;
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
 
-  switch (password) {
-    case null:
-      message = 'Canceled by user!';
-      break;
-    case ADMIN_PASSWORD:
-      message = 'Welcome!';
-      break;
-    default:
-      message = 'Access denied, wrong password!';
-  }
+//   switch (password) {
+//     case null:
+//       message = 'Canceled by user!';
+//       break;
+//     case ADMIN_PASSWORD:
+//       message = 'Welcome!';
+//       break;
+//     default:
+//       message = 'Access denied, wrong password!';
+//   }
 
-  console.log(message);
-  return message;
-}
-checkPassword('mangohackzor');
-checkPassword(null);
-checkPassword('polyhax');
-checkPassword('jqueryismyjam');
+//   console.log(message);
+//   return message;
+// }
+// checkPassword('mangohackzor');
+// checkPassword(null);
+// checkPassword('polyhax');
+// checkPassword('jqueryismyjam');
