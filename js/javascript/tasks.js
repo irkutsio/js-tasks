@@ -346,3 +346,569 @@
 // checkPassword(null);
 // checkPassword('polyhax');
 // checkPassword('jqueryismyjam');
+
+// автоперевірка 29
+// function getShippingCost(country) {
+//   let message;
+//   switch (country) {
+//     case 'China':
+//       message = 'Shipping to China will cost 100 credits';
+//       break;
+//     case 'Chile':
+//       message = 'Shipping to Chile will cost 250 credits';
+//       break;
+//     case 'Australia':
+//       message = 'Shipping to Australia will cost 170 credits';
+//       break;
+//     case 'Jamaica':
+//       message = 'Shipping to Jamaica will cost 120 credits';
+//       break;
+//     default:
+//       message = 'Sorry, there is no delivery to your country';
+//   }
+
+//   console.log(message);
+//   return message;
+// }
+// getShippingCost('Germany');
+// getShippingCost('China');
+// getShippingCost('Chile');
+// getShippingCost('Jamaica');
+// getShippingCost('Sweden');
+
+// автоперевірка 30
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`;
+//   console.log(message);
+//   return message;
+// }
+// getNameLength('Poly');
+// getNameLength('Harambe');
+// getNameLength('Billy');
+// getNameLength('Joe');
+
+// автоперевірка 31
+// const courseTopic = 'JavaScript essentials';
+// // Change code below this line
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+
+// // Change code above this line
+// console.log(courseTopicLength);
+// console.log(firstElement);
+// console.log(lastElement);
+
+// автоперевірка 32 ?????
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length);
+
+//   return substring;
+// }
+// getSubstring(string, length);
+// getSubstring('Hello world', 3);
+// getSubstring('Hello world', 6);
+// getSubstring('Hello world', 8);
+// getSubstring('Hello world', 11);
+// getSubstring('Hello world', 0);
+
+// автоперевірка 33
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length <= maxLength) {
+//     result = message;
+//   } else {
+//     result = message.slice(0, maxLength) + '...';
+//   }
+//   /// Change code above this line
+//   console.log(result);
+//   return result;
+// }
+// formatMessage('Curabitur ligula sapien', 16);
+// formatMessage('Curabitur ligula sapien', 23);
+// formatMessage('Vestibulum facilisis purus nec', 20);
+// formatMessage('Vestibulum facilisis purus nec', 30);
+// formatMessage('Nunc sed turpis a felis in nunc fringilla', 15);
+// formatMessage('Nunc sed turpis a felis in nunc fringilla', 41);
+
+// автоперевірка 34
+// function normalizeInput(input) {
+//   const normalizedInput = input.toLowerCase(); // Change this line
+
+//   return normalizedInput;
+// }
+// normalizeInput(input);
+// normalizeInput('Hello world');
+// normalizeInput("This ISN'T SpaM");
+// normalizeInput('Big SALE');
+
+// автоперевірка 35
+// function checkForName(fullName, name) {
+//   const result = fullName.includes(name);
+//   return result;
+// }
+// checkForName(fullname, name).checkForName('Egor Kolbasov', 'Egor');
+// checkForName('Egor Kolbasov', 'egor');
+// checkForName('Egor Kolbasov', 'egOr');
+// checkForName('Egor Kolbasov', 'Zhenya');
+// checkForName('Vadim Nekrasov', 'Vadim');
+// checkForName('Vadim Nekrasov', 'vadim');
+// checkForName('Vadim Nekrasov', 'Dima');
+
+// автоперевірка 36
+// function checkForSpam(message) {
+//   let result;
+//   result = message.toLowerCase().includes('spam') || message.toLowerCase().includes('sale');
+
+//   // Change code above this line
+//   console.log(result);
+//   return result;
+// }
+// checkForSpam('Latest technology news');
+// checkForSpam('JavaScript weekly newsletter');
+// checkForSpam('Get best sale offers now!');
+// checkForSpam('Amazing SalE, only tonight');
+// checkForSpam('Trust me, this is not a spam message');
+// checkForSpam('Get rid of sPaM emails. Our book in on sale!');
+// checkForSpam('[SPAM] How to earn fast money?');
+
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (let i = 0; i < clients.length; i += 1) {
+//   console.log(clients[i]);
+// }
+
+// модуль 2 автоперевірка 1
+// function checkAge(age) {
+//   if (age >= 20) {
+//     // Change this line
+//     return 'You are an adult';
+//   } else {
+//     return 'You are a minor';
+//   }
+// }
+
+//  автоперевірка 2
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   // Change code below this line
+
+//   if (password === ADMIN_PASSWORD) {
+//     return 'Welcome!';
+//   }
+//   return 'Access denied, wrong password!';
+
+//   // Change code above this line
+// }
+
+//  автоперевірка 3
+// function checkStorage(available, ordered) {
+//   // Change code below this line
+
+//   if (ordered === 0) {
+//     return 'Your order is empty!';
+//   }
+//   if (ordered > available) {
+//     return 'Your order is too large, not enough goods in stock!';
+//   }
+
+//   return 'The order is accepted, our manager will contact you';
+// }
+
+//  автоперевірка 6
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// const firstElement = fruits[0];
+// const secondElement = fruits[1];
+// const lastElement = fruits[3];
+// console.log(lastElement);
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// fruits[1] = 'peach';
+// fruits[3] = 'banana';
+// // Write your code under this line
+// console.log(fruits);
+
+//  автоперевірка 8
+
+// const fruits = ['apple', 'peach', 'pear', 'banana'];
+
+// // Change code below this line
+// const lastElementIndex = fruits.length - 1;
+// const lastElement = fruits[lastElementIndex];
+// console.log(lastElementIndex);
+// console.log(lastElement);
+
+//  автоперевірка 9
+// function getExtremeElements(array) {
+
+//   return (array = [array[0], array[array.length - 1]]);
+
+// }
+
+// автоперевірка 10
+// function splitMessage(message, delimiter) {
+//   let words;
+//   // Change code below this line
+//   words = message.split(delimiter);
+//   // Change code above this line
+
+//   return words;
+// }
+
+// splitMessage('Mango hurries to the train', ' '); //повертає ["Mango", "hurries", "to", "the", "train"]
+// splitMessage('Mango', ''); //повертає ["M", "a", "n", "g", "o"]
+// splitMessage('best_for_week', '_'); //["best", "for", "week"]
+
+// автоперевірка 10
+// function calculateEngravingPrice(message, pricePerWord) {
+//   // Change code below this line
+//   let value;
+//   value = message.split(' ');
+
+//   return value.length * pricePerWord;
+
+//   // console.log(value.length * pricePerWord);
+// }
+
+// calculateEngravingPrice('JavaScript is in my blood', 10);
+// calculateEngravingPrice('JavaScript is in my blood', 20);
+// calculateEngravingPrice('Web-development is creative work', 40);
+
+// автоперевірка 12
+// function makeStringFromArray(array, delimiter) {
+//   let string;
+//   // Change code below this line
+
+//   string = array.join(delimiter);
+
+//   // Change code above this line
+//   return string;
+// }
+
+// автоперевірка 13
+// function slugify(title) {
+//   let result;
+
+//   result = title.toLowerCase().split(' ').join('-');
+//   // Change code below this line
+//   // Change code above this line
+//   console.log(result);
+// }
+
+// надо было сделать через ретерн
+// function slugify(title) {
+//   return  title.toLowerCase().split(' ').join('-');
+// }
+
+// slugify('Arrays for begginers'); //повертає "arrays-for-begginers"
+// slugify('English for developer'); //повертає "english-for-developer"
+// slugify('Ten secrets of JavaScript'); //повертає "ten-secrets-of-javascript"
+// slugify('How to become a JUNIOR developer in TWO WEEKS'); //повертає "how-to-become-a-junior-developer-in-two-weeks"
+
+//автоперевірка 14
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// const firstTwoEls = fruits.slice(0,2) ;
+// const nonExtremeEls = fruits.slice(1,4);
+// const lastThreeEls = fruits.slice(-3);
+// firstTwoEls - масив із перших двох елементів
+// nonExtremeEls - масив з усіх елементів, крім першого та останнього
+// lastThreeEls - масив із трьох останніх елементів
+
+// Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення нового масиву з усіма елементами двох вихідних firstArray і secondArray. Параметр maxLength містить максимально допустиму довжину нового масиву.
+
+// Якщо кількість елементів нового масиву більша за maxLength, функція повинна повернути копію масиву довжиною maxLength елементів. В іншому випадку функція повинна повернути новий масив повністю.
+
+// Оголошена функція makeArray(firstArray, secondArray, maxLength)
+// Виклик makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3) повертає ["Mango", "Poly", "Ajax"]
+// Виклик makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4) повертає ["Mango", "Poly", "Houston", "Ajax"]
+// Виклик makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3) повертає ["Mango", "Ajax", "Chelsea"]
+// Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2) повертає ["Earth", "Jupiter"]
+// Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4) повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
+// Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0) повертає []
+// Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
+
+//автоперевірка 16
+// function makeArray(firstArray, secondArray, maxLength) {
+//работает:
+// let newArray;
+// let message;
+// newArray = firstArray.concat(secondArray);
+// if (makeArray.length > maxLength) {
+//   message = newArray.split(0, maxLength);
+// }
+// console.log(newArray.splice(0, maxLength));
+
+//тоже работает Ж
+// function makeArray(firstArray, secondArray, maxLength) {
+
+// if (firstArray.concat(secondArray).length >= maxLength) {
+//     return firstArray.concat(secondArray).slice(0, maxLength);
+// }
+// }
+
+// makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3);
+// makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4);
+// makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3);
+
+// function calculateTotal(number) {
+//   let sum;
+//   // Change code below this line
+// }
+// calculateTotal(1);
+// calculateTotal(3); //повертає 6
+// calculateTotal(7); //повертає 28
+// calculateTotal(18); //повертає 171
+
+// const start = 0;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) {
+//   // Change this line
+//   console.log(i);
+// }
+
+//автоперевірка 18
+
+// function calculateTotal(number) {
+//   let sum = 0;
+
+//   for (let i = 1; i <= number; i += 1) {
+//     sum += i;
+//   }
+
+//   return sum;
+// }
+
+// console.log(calculateTotal(12));
+
+// //автоперевірка 19
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) {
+//   const fruit = fruits[i];
+//   console.log(fruit);
+// }
+
+// автоперевірка 20
+// function calculateTotalPrice(order) {
+//   let total = 0;
+
+//   for (i = 0; i < order.length; i += 1) {
+//     console.log(order[i]);
+//     total += order[i];
+//   }
+//   // console.log(total);
+// }
+// calculateTotalPrice([12, 85, 37, 4]); //повертає 138
+// calculateTotalPrice([164, 48, 291]); //повертає 503
+
+// function findLongestWord(string) {
+//   // let wordsArray;
+// let maxword;
+// wordsArray = string.split(' ');
+// maxword = wordsArray[0].length;
+// for (let i = 0; i <= C.length; i += 1) {
+//   if (maxword < wordsArray[i]) {
+//     maxword = wordsArray[i];
+//   }
+//   console.log(maxword);
+// }
+
+// автоперевырка 21
+//   let stringArray = string.split(' ');
+//   let maxword = stringArray[0];
+//   console.log(stringArray);
+//   console.log(maxword);
+
+//   for (let i = 0; i < stringArray.length; i += 1) {
+//     console.log(i);
+//     if (maxword.length < stringArray[i].length) {
+//       maxword = stringArray[i];
+//       console.log(maxword);
+//     }
+//     return maxword;
+//   }
+// }
+
+// findLongestWord('May the force be with you');
+// findLongestWord('The quick brown fox jumped over the lazy dog');
+
+//автоперевірка 22 не совсем то !!!!
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//     console.log(numbers);
+//   }
+//   // Change code above this line
+//   return numbers;
+// }
+// createArrayOfNumbers(14, 17);
+// // createArrayOfNumbers(29, 34);
+
+//автоперевірка 23
+// function filterArray(numbers, value) {
+//   const newArray = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       // console.log(numbers[i]);
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   console.log(newArray);
+// }
+// filterArray([12, 24, 8, 41, 76], 20);
+
+//автоперевірка 24
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+//   if (fruits.includes(fruit)) {
+//     console.log(true);
+//   }
+//   // return; // Change this line
+//   else {
+//     console.log(false);
+//   }
+// }
+// checkFruit('plum');
+// checkFruit('mandarin');
+// checkFruit('pear');
+// checkFruit('Pear');
+
+// //автоперевірка 24
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//   // Change code above this line
+// }
+
+// автоперевірка 25
+// function getCommonElements(array1, array2) {
+//   let newArray = [];
+
+//   for (let i = 0; i < array1.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       newArray.push(array1[i]);
+//     }
+//   }
+//   console.log(newArray);
+//   return newArray;
+// }
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+
+//// автоперевірка 27
+// function filterArray(numbers, value) {
+//  const filteredNumbers = [];
+// for (const number of numbers) {
+//     console.log(number);
+// if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+// return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// *****
+
+//автоперевірка 29
+// function getEvenNumbers(start, end) {
+//   const numbers = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     console.log([i]);
+//     if ([i] % 2 === 0) {
+//       console.log(numbers.push[i]);
+//     }
+//   }
+// }
+// **********
+// function getEvenNumbers(start, end) {
+//   const numbers = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       numbers.push(i);
+//     }
+//     console.log(numbers);
+//   }
+//   return numbers;
+// }
+
+// getEvenNumbers(7, 15);
+
+//// автоперевірка 32
+// Change code below this line
+// function includes(array, value) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] === value) {
+//       console.log(true);
+//     }
+//   }
+//   console.log(false);
+//   // Change code above this line
+// }
+
+// includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');
+// includes(['apple', 'plum', 'pear', 'orange'], 'plum');
+
+// ****** модуль 3
+// автоперевірка 10
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+// for (items in apartment) {
+//   keys.push(items);
+//   values.push(apartment[items]);
+// }
+// console.log(values);
+
+// ******** автоперевырка12
+// function countProps(object) {
+//   let propCount = 0;
+
+//   //для значения ключа
+//   const values = Object.values(object);
+//   console.log(values);
+
+//   // for (const key in object)
+//   //   // console.log(key);
+//   //   propCount += object.hasOwnProperty(key);
+//   //   // console.log(propCount);
+//   // }//тоже засчитало правильно
+
+//   // propCount = Object.keys(object).length;
+//   // console.log(propCount);// правильное решение
+//   return propCount;
+// }
+// countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 });
+
+// Перебери об'єкт apartment, використовуючи метод Object.keys() і цикл for...of.
+// Запиши у змінну keys масив ключів власних властивостей об'єкта apartment, і додай
+// в масив values всі значення його властивостей.
+
+// ********автоперевірка 13
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//   values.push(apartment[key]);
+//   console.log(keys);
+//   console.log(values);
+// }
