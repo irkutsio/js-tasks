@@ -945,3 +945,217 @@
 //   hexColors.push(color.hex);
 //   rgbColors.push(color.rgb);
 // }
+// ************
+// автоперевірка 18
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       console.log(product.price);
+//     }
+//   }
+// }
+// getProductPrice('Radar');
+// getProductPrice('Grip');
+// getProductPrice('Scanner');
+// getProductPrice('Droid');
+
+//***********автоперевірка 19 */
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// const propNames = [];
+
+// function getAllPropValues(propName) {
+//   for (const product of products) {
+//     if (product[propName]) {
+//       console.log(product[propName]);
+//       propNames.push(product[propName]);
+//         console.log(propNames);
+//     }
+//   }
+
+//   const arr = [];
+//   for (const product of products) {
+//     for (const key in product) {
+//       if (key === propName) {
+//         arr.push(product[key]);
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// getAllPropValues('name');
+// getAllPropValues('quantity');
+// getAllPropValues('price');
+
+//****************** */
+// автоперевірка 20
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       console.log(product.price * product.quantity);
+//     }
+//   }
+// }
+// calculateTotalPrice('Droid'); //повертає 2800
+// calculateTotalPrice('Grip'); //повертає 10800
+// calculateTotalPrice('Scanner'); //повертає 8100
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+
+//****************
+// автоперевірка 24
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const { hex, rgb } of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+//   console.log(hexColors);
+// }
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+
+// const {
+//   today: {
+//     low: lowToday,
+//     high: highToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
+
+//**************** автоперевірка 26
+
+// function calculateMeanTemperature(forecast) {
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
+
+//   console.log((todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4);
+// }
+// calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } });
+//  ********************************
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+// console.log(finalSettings);
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'General';
+//   const priority = 'Normal';
+
+//   const obj = {
+//     category,
+//     priority,
+//     ...data,
+//     text,
+//     completed,
+//   };
+// }
+
+// // makeTask({ category: 'General', priority: 'Normal', completed: false });
+// // makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' });
+
+//******************* */
+// Change code below this line
+
+// **********************
+//автоперевірка 32
+
+// function addOverNum(firstNum, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > firstNum) {
+//       total += arg;
+//     }
+//   }
+// return total;
+// }
+// add(20, 74, 11, 62, 46, 12, 36);
+
+//*********************** */
+// автоперевірка 33
+// Change code below this line
+// function findMatches(arr, ...numbers) {
+//   const matches = []; // Don't change this line
+//   for (const item of arr) {
+//     for (const number of numbers) {
+//       if (item === number) {
+//         matches.push(item);
+//         console.log(matches);
+//       }
+//     }
+//   }
+// }
+// findMatches([1, 2, 8, 4, 5], 1, 8, 2, 7);
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2);
