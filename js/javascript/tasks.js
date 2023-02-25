@@ -1159,3 +1159,109 @@
 // }
 // findMatches([1, 2, 8, 4, 5], 1, 8, 2, 7);
 // findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2);
+
+// *******************
+//автоперевірка 35
+// Доповни метод updateBook(oldName, newName) таким чином, щоб він змінював назву книги
+// з oldName на newName у властивості books.Використовуй indexOf() для того, щоб знайти потрібний
+// елемент масиву, і splice() для того, щоб замінити цей елемент.
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     // console.log(this.books);
+//     console.log(this.books.indexOf(oldName));
+//     console.log(this.books.splice(this.books.indexOf(oldName), 1, newName));
+//     console.log(this.books);
+//   },
+// };
+// bookShelf.updateBook('Haze', 'Dungeon chronicles'); // значення властивості books -
+// //це масив["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+// // bookShelf.updateBook('The last kingdom', 'Dune'); //значення властивості books -
+// //це масив["Dune", "Haze", "The guardian of dreams"]
+
+//автоперевірка 39
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   removePotion(potionName) {
+//     // console.log(this.potions.indexOf(potionName));
+//     // console.log(this.potions.splice(this.potions.indexOf(potionName), 1));
+//     // console.log(this.potions);
+//   },
+// };
+
+// atTheOldToad.removePotion('Dragon breath'); //
+// //   у властивості potions буде масив["Speed potion", Stone skin"]
+// atTheOldToad.removePotion('Speed potion');
+// //у властивості potions буде масив["Stone skin"]
+
+//автоперевірка 40
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   updatePotionName(oldName, newName) {
+//     console.log(this.potions.indexOf(oldName));
+//     return this.potions.splice(this.potions.indexOf(oldName), 1, newName);
+//   },
+// };
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) console.log(potion.name);
+//     if (potion.name.includes(newPotion.name)) {
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     return this.potions.push(newPotion);
+//   },
+
+//   removePotion(potionName) {
+//     for (const potion of this.potions) {
+//       //   console.log(this.potions);
+//       //   console.log(potion);
+//       if (potion.name === potionName) {
+//         const potionIndex = this.potions.indexOf(potion);
+//         this.potions.splice(potionIndex, 1);
+//       }
+//     }
+//   },
+// };
+
+// // Для вихідного об'єкта після виклику методу
+// atTheOldToad.removePotion('Speed potion');
+// // у властивості potions буде масив
+// // [{ name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
+
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
+
+  // updatePotionName(oldName, newName) -
+  // оновлює властивість name об'єкта-зілля
+  // з назвою oldName на newName в масиві potions.
+
+  updatePotionName(oldName, newName) {
+    for (const potion of this.potions) {
+      //   console.log(this.potions);
+      console.log(potion.name);
+      if (potion.name === oldName) {
+        potion.name = newName;
+      }
+      return this.potions;
+    }
+  },
+};
+
+atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
+// , у властивості potions буде масив[{ name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 }]
