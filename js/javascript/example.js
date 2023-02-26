@@ -429,3 +429,61 @@ const friends = [
 // console.log(`Blue: ${blue}`); // "Blue: 255"
 
 // **********************
+
+// const user = {
+//   name: 'Artem',
+//   age: 28,
+//   languages: {
+//     html: false,
+//     css: false,
+//     js: true,
+//     'React Native': false,
+//   },
+//   sayHello() {
+//     console.log(`My name ${this.name}`);
+//   },
+//   iKnow() {
+//     // for (const key in this.languages) {
+//     //   // console.log(this.languages[key]); false false true false
+//     //   if (this.languages[key]) {
+//     //     console.log(key); //js
+//     //   }
+//     // }
+//     // const keys = Object.keys(this.languages);
+//     // for (const key of keys) {
+//     //   console.log(this.languages[key]);
+//     //   if (this.languages[key]) {
+//     //     console.log(key);
+//     //   }
+//     // }
+//     // console.log(keys);
+
+//     // console.log(Object.values(this.languages));
+//     console.log(Object.entries(this.languages));
+//   },
+// };
+
+// user.iKnow();
+
+// //*******************************88 */
+// const salaries = {
+//   John: 300,
+//   Sam: 190,
+//   Frank: 165,
+// };
+
+// let sum = 0;
+// for (const key in salaries) {
+//   // console.log(salaries[key]);
+//   sum += salaries[key];
+//   // console.log(sum);
+// }
+
+// // console.log(Object.values(salaries));
+// const values = Object.values(salaries) // лучше ввести переменную
+// for (const value of Object.values(salaries)) {
+//   sum += value;
+//   console.log(sum);
+// }
+
+//********************* */
