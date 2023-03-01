@@ -1245,3 +1245,145 @@
 //   },
 //   // Change code above this line
 // };
+
+//*****************автоперевірка 4 модуль 4 */
+
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       return onSuccess;
+//     }
+//     return onError;
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`З'єднуємо з ${name}, очікуйте...`);
+//   // Логіка прийняття дзвінка
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+//   // Логіка активації автовідповідача
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+//   // Логіка запису голограми
+// }
+
+// processCall('Mango', takeCall, activateAnsweringMachine);
+// processCall('Poly', takeCall, leaveHoloMessage);
+
+//****автоперевірка 5 */
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;
+//     console.log(totalPrice);
+//   });
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+// calculateTotalPrice([4, 6, 5, 7]);
+
+//****автоперевірка 6 */
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//   numbers.forEach(function (item) {
+//     if (item > value) {
+//       filteredNumbers.push(item);
+//       console.log(filteredNumbers);
+//     }
+//   });
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+
+//   for (let i = 0; i < firstArray.length; i += 1) {
+//     if (secondArray.includes(firstArray[i])) {
+//       commonElements.push(firstArray[i]);
+//     }
+//   }
+
+//***********************автоперевірка 7 */
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+//   firstArray.forEach(function (number) {
+//     if (secondArray.includes(number)) {
+//       commonElements.push(number);
+//       console.log(commonElements);
+//     }
+//   });
+//   return commonElements;
+//   // Change code above this line
+// }
+// // getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+// getCommonElements([1, 2, 3], [10, 20, 30]);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const logMessage = (number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// };
+
+// numbers.forEach(logMessage);
+
+// Виконай рефакторинг функції calculateTotalPrice(orderedItems),
+//     замінивши її оголошення на стрілочну функцію.Заміни колбек - функцію,
+//         передану в метод forEach(), на стрілочну функцію.
+
+//***********************автоперевірка 10 */
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(item => {
+//     totalPrice += item;
+//   });
+//   console.log(totalPrice);
+//   return totalPrice;
+// };
+// // Change code above this line
+
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+// calculateTotalPrice([164, 48, 291]);
