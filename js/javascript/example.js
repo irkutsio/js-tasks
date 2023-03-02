@@ -702,3 +702,241 @@
 // const scores = [61, 19, 74, 35, 92, 56];
 // scores.sort();
 // console.log(scores); // [19, 35, 56, 61, 74, 92]
+
+// Напишите функцию add, которая принимает
+// два числа и функцию - колбэк, которая будет вызвана с результатом сложения этих чисел.
+
+// function add(num1, num2, callback) {
+//   const sum = num1 + num2;
+//   callback(sum);
+// }
+
+// add(5, 10, function (result) {
+//   console.log(result); // Output: 15
+// });
+
+// const pureMultiply = (array, value) => {
+//   const newArray = [];
+
+//   array.forEach(element => {
+//     newArray.push(element * value);
+//   });
+
+//   return newArray;
+// };
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = pureMultiply(numbers, 2);
+
+// // Мутація вихідних даних не відбулася
+// console.log(numbers); // [1, 2, 3, 4, 5]
+// // Функція повернула новий масив зі зміненими даними
+// console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+// function multiplyByTwo(arr, callback) {
+//   const multipliedArr = arr.map(number => number * 2);
+//   callback(multipliedArr);
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// multiplyByTwo(numbers, function (result) {
+//   console.log(result); // Output: [2, 4, 6, 8, 10]
+// });
+
+//************************
+// const numbers = [1, 2, 3, 4, 5];
+
+// function multiplyByTwo(numbers, callback) {
+//   const multipliedArr = numbers.forEach(number => number * 2);
+
+//   callback(multipliedArr);
+// }
+
+// multiplyByTwo(numbers, function (result) {
+//   console.log(result); // Output: [2, 4, 6, 8, 10]
+// });
+//**********************************
+
+// const pureMultiply = (array, value) => {
+//   const newArray = [];
+
+//   array.forEach(element => {
+//     newArray.push(element * value);
+//   });
+
+//   return newArray;
+// };
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = pureMultiply(numbers, 2);
+
+// // Мутація вихідних даних не відбулася
+// console.log(numbers); // [1, 2, 3, 4, 5]
+// // Функція повернула новий масив зі зміненими даними
+// console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+//***************map **************//
+
+// const forecast = [
+//   { today: 1, low: 28, high: 32 },
+//   { tomorrow: 2, low: 27, high: 31 },
+//   { nextday: 3, low: 25, high: 39 },
+// ];
+
+// const onlyLow = forecast.map(item => item.low);
+// console.log(onlyLow);
+
+// const onlyHigh = forecast.map(item => item.high);
+// console.log(onlyHigh);
+
+// const test = forecast.map(({ low, high }) => {
+//   return { low, high };
+// });
+// console.log(test);
+
+// const onlyHigh = forecast.map(item => {
+//   console.log(item);
+
+//   return {
+//     ...item,
+//     low: 12,
+//   };
+// });
+// console.log(onlyHigh);
+
+// **********поменяла одну температуру */
+// const changeLow = 27;
+
+// const test2 = forecast.map(item => {
+//   console.log(item.low);
+//   if (item.low === changeLow) {
+//     console.log(`вот и оно`);
+
+//     return {
+//       ...item,
+//       low: -3,
+//     };
+//   }
+
+//   return item;
+// });
+// console.log(test2);
+
+// *************тернарник */
+
+// const changeLow = 27;
+// const test2 = forecast.map(item => {
+//   return item.low === changeLow ? { ...item, low: -3 } : item;
+// });
+// console.log(test2);
+
+// *********************filter***********
+
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    skills: ['ipsum', 'lorem'],
+    gender: 'male',
+    age: 37,
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+    gender: 'female',
+    age: 34,
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+    gender: 'male',
+    age: 24,
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    skills: ['adipisicing', 'irure', 'velit'],
+    gender: 'female',
+    age: 21,
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    skills: ['ex', 'culpa', 'nostrud'],
+    gender: 'male',
+    age: 27,
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    skills: ['non', 'amet', 'ipsum'],
+    gender: 'male',
+    age: 38,
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    skills: ['lorem', 'veniam', 'culpa'],
+    gender: 'female',
+    age: 39,
+  },
+];
+
+const ageFilter = users.filter(({ age }) => {
+  return age > 27;
+});
+console.log(ageFilter);
+
+// const userIsActive = users.filter(user => user.isActive)
+//**************деструктуризация */
+// const userIsActive = users.filter(({ isActive }) => {
+//   return isActive;
+// });
+//************** */
+// console.log(userIsActive);
+// const userIsNotActive = users.filter(user => !user.isActive);
+// console.log(userIsNotActive);
+
+//******************* */
+
+// const numbers = [1, 2, 4, 3, 6, 5];
+// // const filterNumbers = numbers.filter(number => {
+// //   console.log(number);
+
+// //   return number > 3;
+// // });
+// // ******************
+// // const filterNumbers = numbers.filter(number => number < 2 || number > 5);
+
+// console.log(filterNumbers);
