@@ -941,77 +941,159 @@
 
 // console.log(filterNumbers);
 
-const users = [
-  {
-    name: 'Moore Hensley',
-    email: 'moorehensley@indexia.com',
-    eyeColor: 'blue',
-    friends: ['Sharron Pace'],
-    isActive: false,
-    balance: 2811,
-    gender: 'male',
-    cars: ['bmw', 'peugeot'],
-  },
-  {
-    name: 'Sharlene Bush',
-    email: 'sharlenebush@tubesys.com',
-    eyeColor: 'blue',
-    friends: ['Briana Decker', 'Sharron Pace'],
-    isActive: true,
-    balance: 3821,
-    gender: 'female',
-    cars: ['mazda', 'peugeot'],
-  },
-  {
-    name: 'Ross Vazquez',
-    email: 'rossvazquez@xinware.com',
-    eyeColor: 'green',
-    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-    isActive: false,
-    balance: 3793,
-    gender: 'male',
-    cars: ['audi', 'kia'],
-  },
-  {
-    name: 'Elma Head',
-    email: 'elmahead@omatom.com',
-    eyeColor: 'green',
-    friends: ['Goldie Gentry', 'Aisha Tran'],
-    isActive: true,
-    balance: 2278,
-    gender: 'female',
-    cars: ['audi', 'kia', 'aston martin'],
-  },
-  {
-    name: 'Carey Barr',
-    email: 'careybarr@nurali.com',
-    eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
-    isActive: true,
-    balance: 3951,
-    gender: 'male',
-  },
-  {
-    name: 'Blackburn Dotson',
-    email: 'blackburndotson@furnigeer.com',
-    eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
-    isActive: false,
-    balance: 1498,
-    gender: 'male',
-    cars: ['audi', 'kia', 'aston martin'],
-  },
-  {
-    name: 'Sheree Anthony',
-    email: 'shereeanthony@kog.com',
-    eyeColor: 'brown',
-    friends: ['Goldie Gentry', 'Briana Decker'],
-    isActive: true,
-    balance: 2764,
-    gender: 'female',
-  },
-];
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     cars: ['bmw', 'peugeot'],
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     cars: ['mazda', 'peugeot'],
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     cars: ['audi', 'kia'],
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     cars: ['audi', 'kia', 'aston martin'],
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     cars: ['audi', 'kia', 'aston martin'],
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
 
-const carsOfUsers = users =>
-  users.flatMap(users => users.cars).filter((car, idx, cars) => cars.indexOf(car) === idx);
-console.log(carsOfUsers(users));
+// const carsOfUsers = users =>
+//   users.flatMap(users => users.cars).filter((car, idx, cars) => cars.indexOf(car) === idx);
+// console.log(carsOfUsers(users));
+
+//**************************FIND */
+
+// const userName = users.find(({ name }) => name === 'Sheree Anthony');
+// console.log(userName);
+/////
+// const findUser = (obj, userName) => {
+//   return obj.find(user => user.name === userName);
+// };
+
+// console.log(findUser(users, 'Sheree Anthony'));
+
+// const arr = [
+//   { name: 'Albert', surname: 'Einstein', born: 1879, dead: 1955, id: 1 },
+//   { name: 'Isaac', surname: 'Newton', born: 1643, dead: 1727, id: 2 },
+//   { name: 'Galileo', surname: 'Galilei', born: 1564, dead: 1642, id: 3 },
+//   { name: 'Marie', surname: 'Curie', born: 1867, dead: 1934, id: 4 },
+//   { name: 'Pierre', surname: 'Curie', born: 1859, dead: 1906, id: 5 },
+//   { name: 'Johannes', surname: 'Kepler', born: 1571, dead: 1630, id: 6 },
+//   { name: 'Nicolaus', surname: 'Copernicus', born: 1473, dead: 1543, id: 7 },
+//   { name: 'Max', surname: 'Planck', born: 1858, dead: 1947, id: 8 },
+//   { name: 'Katherine', surname: 'Blodgett', born: 1898, dead: 1979, id: 9 },
+//   { name: 'Ada', surname: 'Lovelace', born: 1815, dead: 1852, id: 10 },
+//   { name: 'Sarah E.', surname: 'Goode', born: 1855, dead: 1905, id: 11 },
+//   { name: 'Lise', surname: 'Meitner', born: 1878, dead: 1968, id: 12 },
+//   { name: 'Hanna', surname: 'Hammarström', born: 1829, dead: 1909, id: 13 },
+// ];
+
+// // - Получить массив ученых, родившихся в 19 веке.
+// // - Найти общую сумму лет, сколько прожили все ученые.
+// // - Отсортировать ученых по алфавиту.
+// // - Отсортировать ученых по количеству прожитых лет.
+// // - Удалить из массива ученых, родившихся в 15, 16 или 17 веках.
+// // - Найти ученого, который родился позже всех.
+// // - Найти год рождения Albert Einstein.
+// // - Найти ученых, фамилия которых начинается на букву "С".
+// // - Удалить из массива всех ученых, имя которых начинается на букву "A".
+// // - Найти ученого, который прожил больше всех и ученого, который меньше.
+// // - Найти ученых, у которых совпадают первые буквы имени и фамилии.
+// // - Узнать, все ли ученые работали в 19 веке.
+
+//**************************REDUCE */
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// const total = thirdArray.reduce((acc, number) => acc + number);
+// console.log(total);
+// *******************
+// const salaries = {
+//   John: 300,
+//   Sam: 190,
+//   Frank: 165,
+// };
+// const totalSal = Object.values(salaries).reduce((acc, salary) => {
+//   return acc + salary;
+// });
+// console.log(totalSal);
+// ********************
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
+
+// *************************SORT****
+// const numbers = [1, 4, 3, 6, 5];
+// numbers.sort((a, b) => {
+//   return b - a;
+// });
+// console.log(numbers);
+
+// const letters = ['S', 'a', 'A', 'b', 'B'];
+// letters.sort();
+// console.log(letters);
+
+// const numbers = [1, 4, [6, 9, [7, [0], 4]], [3, 0, 9], 6, 5];
+// console.log(numbers.flat(3));
+
+const numbers = [1, 2, 3];
+const numbers1 = [3, 4, 5];
+// const newArr = [...numbers, ...numbers1].filter(
+//   (item, idx, newArr) => newArr.indexOf(item) === idx
+// );
