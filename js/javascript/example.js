@@ -1092,8 +1092,107 @@
 // const numbers = [1, 4, [6, 9, [7, [0], 4]], [3, 0, 9], 6, 5];
 // console.log(numbers.flat(3));
 
-const numbers = [1, 2, 3];
-const numbers1 = [3, 4, 5];
+// const numbers = [1, 2, 3];
+// const numbers1 = [3, 4, 5];
 // const newArr = [...numbers, ...numbers1].filter(
 //   (item, idx, newArr) => newArr.indexOf(item) === idx
 // );
+
+//************************this THIS */
+
+// const petya = {
+//   username: 'Petya',
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+//******** */
+// petya.showName();
+// const bookShelf = {
+//   authors: ['Бернард Корнуелл', 'Роберт Шеклі'],
+//   getAuthors() {
+//     return this.authors;
+//   },
+//   addAuthor(authorName) {
+//     this.authors.push(authorName);
+//   },
+// };
+//****************** */
+// console.log(bookShelf.getAuthors()); // ["Бернард Корнуелл", "Роберт Шеклі"]
+// bookShelf.addAuthor('Лі Таніт');
+// console.log(bookShelf.getAuthors()); // ["Бернард Корнуелл", "Роберт Шеклі", "Лі Таніт"]
+//****** */
+// function foo() {
+//   console.log(this);
+// }
+// foo();
+//*********** */
+// const petya = {
+//   username: 'Petya',
+//   showThis() {
+//     console.log(this);
+//   },
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+
+// petya.showThis(); // {username: "Petya", showThis: ƒ, showName: ƒ}
+// petya.showName(); // 'Petya'
+//******** */
+// const user = {
+//   tag: 'Mango',
+//   showTag() {
+//     console.log('show tag this', this);
+//   },
+// };
+// user.showTag();
+//********* */
+// const counter = {
+//   value: 0,
+//   increment(value) {
+//     console.log('increment->this', this);
+//     this.value += value;
+//   },
+//   decrement(value) {
+//     console.log('decrement->this', this);
+//     this.value -= value;
+//   },
+// };
+// const updateCounter = function (value, operation) {
+//   operation(value);
+// };
+// // updateCounter(10, counter.increment);
+// updateCounter(5, counter.decrement);
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = 'Манго';
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+//*************** */
+// const objC = {
+//   z: 5,
+// };
+// // console.log(objC);
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+// console.log(objB);
+
+// const objA = Object.create(objB);
+// objA.x = 30;
+// console.log(objA.x);
+
+// Налаштування
+
+const myArray = [];
+let i = 5;
+
+while (i <= 5) {
+  myArray.push(i);
+}
+console.log(myArray);
