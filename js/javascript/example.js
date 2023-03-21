@@ -1,3 +1,31 @@
+//рекурсия !!!!!!!!!!!!!!
+// let add = 0;
+// function sum(arr, n) {
+//   // Змініть код лише під цим рядком
+
+//   if (n <= 0) {
+//     return 0;
+//   } else {
+//     return (add = sum(arr, n - 1) + arr[n - 1]);
+//   }
+//   // Змініть код лише над цим рядком
+// }
+// sum([2, 3, 4], 1);
+// sum([2, 3, 4, 5], 3);
+// console.log(add);
+//!!!!!!!!!!!обратный отсчет
+// function countdown(n) {
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const array = countdown(n - 1);
+//     array.unshift(n);
+//     return array;
+//   }
+// }
+// console.log(countdown(7));
+//*********************** */
+
 // const cards = [1, 2, 3, 45, 23, 8];
 // let total = 0;
 
@@ -1027,34 +1055,132 @@
 
 // console.log(findUser(users, 'Sheree Anthony'));
 
-// const arr = [
-//   { name: 'Albert', surname: 'Einstein', born: 1879, dead: 1955, id: 1 },
-//   { name: 'Isaac', surname: 'Newton', born: 1643, dead: 1727, id: 2 },
-//   { name: 'Galileo', surname: 'Galilei', born: 1564, dead: 1642, id: 3 },
-//   { name: 'Marie', surname: 'Curie', born: 1867, dead: 1934, id: 4 },
-//   { name: 'Pierre', surname: 'Curie', born: 1859, dead: 1906, id: 5 },
-//   { name: 'Johannes', surname: 'Kepler', born: 1571, dead: 1630, id: 6 },
-//   { name: 'Nicolaus', surname: 'Copernicus', born: 1473, dead: 1543, id: 7 },
-//   { name: 'Max', surname: 'Planck', born: 1858, dead: 1947, id: 8 },
-//   { name: 'Katherine', surname: 'Blodgett', born: 1898, dead: 1979, id: 9 },
-//   { name: 'Ada', surname: 'Lovelace', born: 1815, dead: 1852, id: 10 },
-//   { name: 'Sarah E.', surname: 'Goode', born: 1855, dead: 1905, id: 11 },
-//   { name: 'Lise', surname: 'Meitner', born: 1878, dead: 1968, id: 12 },
-//   { name: 'Hanna', surname: 'Hammarström', born: 1829, dead: 1909, id: 13 },
-// ];
+const arr = [
+  { name: 'Albert', surname: 'Einstein', born: 1879, dead: 1955, id: 1 },
+  { name: 'Isaac', surname: 'Newton', born: 1643, dead: 1727, id: 2 },
+  { name: 'Galileo', surname: 'Galilei', born: 1564, dead: 1642, id: 3 },
+  { name: 'Marie', surname: 'Curie', born: 1867, dead: 1934, id: 4 },
+  { name: 'Pierre', surname: 'Curie', born: 1859, dead: 1906, id: 5 },
+  { name: 'Johannes', surname: 'Kepler', born: 1571, dead: 1630, id: 6 },
+  { name: 'Nicolaus', surname: 'Copernicus', born: 1473, dead: 1543, id: 7 },
+  { name: 'Max', surname: 'Planck', born: 1858, dead: 1947, id: 8 },
+  { name: 'Katherine', surname: 'Blodgett', born: 1898, dead: 1979, id: 9 },
+  { name: 'Ada', surname: 'Lovelace', born: 1815, dead: 1852, id: 10 },
+  { name: 'Sarah E.', surname: 'Goode', born: 1855, dead: 1905, id: 11 },
+  { name: 'Lise', surname: 'Meitner', born: 1878, dead: 1968, id: 12 },
+  { name: 'Hanna', surname: 'Hammarström', born: 1829, dead: 1909, id: 13 },
+];
 
-// // - Получить массив ученых, родившихся в 19 веке.
-// // - Найти общую сумму лет, сколько прожили все ученые.
-// // - Отсортировать ученых по алфавиту.
-// // - Отсортировать ученых по количеству прожитых лет.
+// 1
+// const bornInEighteenCentury = arr.filter(item => item.born > 1800 && item.born < 1900);
+// console.log(bornInEighteenCentury);
+
+//2
+// let deadYears = 0;
+// let bornYears = 0;
+// for (const item of arr) {
+//   deadYears += item.dead;
+//   bornYears += item.born;
+//   console.log(deadYears - bornYears);
+// }
+//********* */
+// const sumOfYears = array => {
+//   let newArr = [];
+//   let sum = 0;
+//   for (const scientist of array) {
+//     newArr.push(scientist.dead - scientist.born);
+//   }
+//   for (const item of newArr) {
+//     sum += item;
+//   }
+//   return sum;
+// };
+// console.log(sumOfYears(arr));
+
+//3
+// const sorted = [...arr].sort((a, b) => {
+//   return a.name.localeCompare(b.name);
+// });
+// console.log(sorted);
+
+//4
+// const sorted = array => {
+//   newArr = [];
+//   for (const scientist of array) {
+//     newArr.push(scientist.dead - scientist.born);
+//   }
+//   return newArr.sort((a, b) => {
+//     return a - b;
+//   });
+// };
+// console.log(sorted(arr));
+
+// 6;
+// const findMax = arr.reduce((acc, scientist) => (acc.born > scientist.born ? acc : scientist));
+// console.log(findMax);
+
+// 7
+// const findYear = (array, nameOf) => {
+//   for (const scientist of array) {
+//     if (scientist.surname === nameOf);
+//     {
+//       return scientist.born;
+//     }
+//   }
+// };
+// console.log(findYear(arr, 'Einstein'));
+
+//8
+// const findFirstLetter = (array, firstLetter) => {
+//   let newArr = [];
+//   for (const scientist of array) {
+//     if (scientist.surname[0] === firstLetter) {
+//       newArr.push(scientist);
+//     }
+//   }
+//   return newArr;
+// };
+// console.log(findFirstLetter(arr, 'C'));
+
+//9
+// const deleteWithFirstLetter = (array, firstLetter) => {
+//   for (const scientist of array) {
+//     if (scientist.name[0] === firstLetter) {
+//       array.splice(array.indexOf(scientist), 1);
+//     }
+//   }
+//   return array;
+// };
+// console.log(deleteWithFirstLetter(arr, 'A'));
+
+//11
+// const sameLetters = array => {
+//   let newArr = [];
+//   for (const scientist of array) {
+//     if (scientist.name[0] === scientist.surname[0]) {
+//       newArr.push(scientist);
+//     }
+//   }
+//   return newArr;
+// };
+// console.log(sameLetters(arr));
+
+//12
+// const task12 = arr.every(scientist => scientist.born >= 1800 && scientist.dead >= 1900);
+// console.log(task12);
+
+//1// - Получить массив ученых, родившихся в 19 веке.
+//2// - Найти общую сумму лет, сколько прожили все ученые.
+//3// - Отсортировать ученых по алфавиту.
+//4// - Отсортировать ученых по количеству прожитых лет.
 // // - Удалить из массива ученых, родившихся в 15, 16 или 17 веках.
-// // - Найти ученого, который родился позже всех.
-// // - Найти год рождения Albert Einstein.
-// // - Найти ученых, фамилия которых начинается на букву "С".
-// // - Удалить из массива всех ученых, имя которых начинается на букву "A".
+//6// - Найти ученого, который родился позже всех.
+//7// - Найти год рождения Albert Einstein.
+//8// - Найти ученых, фамилия которых начинается на букву "С".
+//9// - Удалить из массива всех ученых, имя которых начинается на букву "A".
 // // - Найти ученого, который прожил больше всех и ученого, который меньше.
-// // - Найти ученых, у которых совпадают первые буквы имени и фамилии.
-// // - Узнать, все ли ученые работали в 19 веке.
+//11// - Найти ученых, у которых совпадают первые буквы имени и фамилии.
+//12// - Узнать, все ли ученые работали в 19 веке.
 
 //**************************REDUCE */
 // const thirdArray = [17, 26, 94, 61, 36, 23, 18];
@@ -1187,12 +1313,12 @@
 // objA.x = 30;
 // console.log(objA.x);
 
-// Налаштування
+// *8888*******************
+// const myArray = [];
+// let i = 5;
 
-const myArray = [];
-let i = 5;
-
-while (i <= 5) {
-  myArray.push(i);
-}
-console.log(myArray);
+// while (i >= 0) {
+//   myArray.push(i);
+//   i -= 1;
+// }
+// console.log(myArray);

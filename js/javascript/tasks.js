@@ -1320,24 +1320,7 @@
 // }
 // calculateTotalPrice([4, 6, 5, 7]);
 
-//****автоперевірка 6 */
-// function filterArray(numbers, value) {
-//   const filteredNumbers = [];
-//   // Change code below this line
-
-//   numbers.forEach(function (item) {
-//     if (item > value) {
-//       filteredNumbers.push(item);
-//       console.log(filteredNumbers);
-//     }
-//   });
-
-//   // Change code above this line
-//   return filteredNumbers;
-// }
-// filterArray([1, 2, 3, 4, 5], 3);
-// filterArray([1, 2, 3, 4, 5], 4);
-// filterArray([1, 2, 3, 4, 5], 5);
+//
 
 //   for (let i = 0; i < firstArray.length; i += 1) {
 //     if (secondArray.includes(firstArray[i])) {
