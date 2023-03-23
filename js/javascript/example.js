@@ -1322,3 +1322,23 @@ const arr = [
 //   i -= 1;
 // }
 // console.log(myArray);
+
+// DOM***********************************************************************************************************************
+// пример с кликами на кнопку!!!
+// const decBtn = document.querySelector('[data-action="decrement"]');
+// const incBtn = document.querySelector('[data-action="increment"]');
+// const newBtn = document.querySelector('[data-action="crement"]');
+
+// incBtn.addEventListener('click', () => {
+//   console.log('клик на плюс');
+//   decBtn.addEventListener('click', onDecrementClick);
+// });
+
+// newBtn.addEventListener('click', () => {
+//   console.log('убираем клик на минус');
+//   decBtn.removeEventListener('click', onDecrementClick);
+// });
+
+// function onDecrementClick() {
+//   console.log('клик на минус');
+// }
