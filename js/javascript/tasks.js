@@ -2512,10 +2512,47 @@ const obj = [
 // console.log(mango.isBlacklisted('mango@mail.com')); // false
 // console.log(mango.isBlacklisted('poly@mail.com')); // true
 
-function test () {
-  for (let i=1; i<11; i++){
-    console.log(i)
+// **********************************************88
+//CODEWARS
+// function longest(s1, s2) {
+//   let str = s1 + s2;
+//   const arr = str.split('');
+//   const unic = arr.filter((num, index, array) => array.indexOf(num) === index).sort().join('');
+//   console.log(unic)
+// }
+// longest('aretheyhere', 'yestheyarehere');
+
+// ************************************
+// function findNeedle(haystack) {
+//   let idx = haystack.indexOf('needle');
+//   return `found the needle at position ${idx}`;
+// }
+// haystack(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]);
+
+// *****************************
+// function getMiddle(s) {
+//   if (s.length % 2 !== 0) {
+//     const idx = Math.floor(s.length / 2);
+//     return s[idx];
+//   } else {
+//     const idx = Math.floor(s.length / 2);
+//     return s[idx - 1] + s[idx];
+//   }
+// }
+// getMiddle('testing'); //,"t"
+// getMiddle('qwertmyuio');
+// getMiddle('o');
+
+// **************************
+function mostLikely(prob1, prob2) {
+  let x = prob1.split(':');
+  let y = prob2.split(':');
+  let first = Number(x[0]) / Number(x[1]);
+  let second = Number(y[0]) / Number(y[1]);
+  if (first < second) {
+    return false;
   }
+  return true;
 }
 
-test()
+mostLikely('223:1', '1:2');
